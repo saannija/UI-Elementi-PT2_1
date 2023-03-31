@@ -15,6 +15,7 @@ public class VardaParadisana : MonoBehaviour {
 	//Text, kurā attēlos tekstu
 	public GameObject tekstaAttelosana;
 
+
 	public void UzglabatTekstu(){
 		nejausais = Random.Range (0, varianti.Length);
 		teksts = ievadesLauks.GetComponent<Text> ().text;
