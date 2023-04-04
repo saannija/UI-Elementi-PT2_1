@@ -14,6 +14,7 @@ public class AtteluParadisana : MonoBehaviour {
     public GameObject mainigaisAttels;
     public Sprite[] atteluMasivs;
     public GameObject IzmeraSlaideris;
+	public GameObject RotacijasSlaideris;
 
 	public void BinaAttels(bool vertiba)
 	{
@@ -70,4 +71,11 @@ public class AtteluParadisana : MonoBehaviour {
         new Vector2(1f* pasreizejaisIzmers,
                                      1f*pasreizejaisIzmers);
     }
+
+	public void MainitRotaciju(){
+		float pasreizejaVertiba = 
+			RotacijasSlaideris.GetComponent<Slider> ().value;
+		mainigaisAttels.transform.localRotation =
+			Quaternion.Euler (0, 0, pasreizejaVertiba * 360);
+	}
 }
